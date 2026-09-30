@@ -76,7 +76,7 @@
 
     async function carregarDados() {
       try {
-        const res = await fetch('ofertas_motos.json');
+        const res = await fetch('ofertas_.json');
         bancoDados = await res.json();
         
         preencherSeletorMotos();
@@ -87,9 +87,9 @@
       }
     }
 
-    function preencherSeletorMotos() {
+    function preencherSeletor() {
       const selectMoto = document.getElementById('select-moto');
-      for (const [chave, moto] of Object.entries(bancoDados.motos)) {
+      for (const [chave, moto] of Object.entries(bancoDados.)) {
         const option = document.createElement('option');
         option.value = chave;
         option.textContent = `${moto.marca} - ${moto.modelo}`;
@@ -108,13 +108,13 @@
       containerSuperOferta.innerHTML = '';
       gridMoto.innerHTML = '';
 
-      if (!chaveSelecionada || !bancoDados.motos[chaveSelecionada]) {
+      if (!chaveSelecionada || !bancoDados.[chaveSelecionada]) {
         gridMoto.innerHTML = '<p class="text-gray-400 col-span-full text-center py-8">Selecione o modelo da sua moto acima para carregar todas as peças e ofertas.</p>';
         tituloSecao.textContent = '🛠️ Todas as Ofertas e Peças da Moto';
         return;
       }
 
-      const motoInfo = bancoDados.motos[chaveSelecionada];
+      const motoInfo = bancoDados.[chaveSelecionada];
       tituloSecao.textContent = `🛠️ Ofertas e Peças para ${motoInfo.marca} ${motoInfo.modelo}`;
 
       // Preenche os anos no seletor
