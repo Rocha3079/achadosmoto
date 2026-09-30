@@ -9,16 +9,7 @@
         "2025",
         "2026"
       ],
-      "produtos": [
-        {
-          "titulo": "Sissy Bar Royal Enfield Hunter 350",
-          "preco_original": "R$ 450,00",
-          "preco_desconto": "R$ 380,00",
-          "desconto_percentual": 15,
-          "imagem": "https://via.placeholder.com/200",
-          "link": "https://mercadolivre.com.br"
-        }
-      ]
+      "produtos": []
     },
     "honda_cg_160_titan": {
       "marca": "Honda",
