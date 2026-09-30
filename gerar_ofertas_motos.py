@@ -1,7 +1,7 @@
 import requests
 import json
 
-MEU_ID_AFILIADO = "SEU_ID_AFILIADO_AQUI" # Insira seu ID de Afiliado ML
+MEU_ID_AFILIADO = "achados2rodas" # Insira seu ID de Afiliado ML
 
 GARAGEM_MOTOS = {
     "royal_enfield_hunter_350": {
