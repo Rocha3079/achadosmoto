@@ -1,0 +1,42 @@
+{
+  "motos": {
+    "royal_enfield_hunter_350": {
+      "marca": "Royal Enfield",
+      "modelo": "Hunter 350",
+      "anos": [
+        "2023",
+        "2024",
+        "2025",
+        "2026"
+      ],
+      "produtos": []
+    },
+    "honda_cg_160_titan": {
+      "marca": "Honda",
+      "modelo": "CG 160 Titan",
+      "anos": [
+        "2016",
+        "2018",
+        "2020",
+        "2022",
+        "2024",
+        "2025",
+        "2026"
+      ],
+      "produtos": []
+    }
+  },
+  "equipamentos_gerais": [],
+  "cupons": [
+    {
+      "codigo": "MOTOS10",
+      "descricao": "10% OFF em Peças e Acessórios Selecionados",
+      "regra": "Compras acima de R$ 150"
+    },
+    {
+      "codigo": "CAPACETE15",
+      "descricao": "15% OFF em Capacetes e Vestuário",
+      "regra": "Válido em itens selecionados"
+    }
+  ]
+}
