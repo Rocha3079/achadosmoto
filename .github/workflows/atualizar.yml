@@ -6,6 +6,43 @@ on:
     - cron: '0 8 * * *'
   workflow_dispatch: # Permite rodar manualmente a qualquer momento
 
+  name: Atualizar Ofertas Diariamente
+
+on:
+  schedule:
+    - cron: '0 8 * * *'
+  workflow_dispatch:
+
+# ADICIONA ESTAS DUAS LINHAS AQUI:
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Baixar código do repositório
+        uses: actions/checkout@v4
+
+      - name: Configurar Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+
+      - name: Instalar dependências
+        run: pip install requests
+
+      - name: Executar script de coleta
+        run: python gerar_ofertas_motos.py
+
+      - name: Salvar alterações no JSON
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add ofertas_motos.json
+          git commit -m "Atualização diária de ofertas" || exit 0
+          git push
+
 jobs:
   build:
     runs-on: ubuntu-latest
